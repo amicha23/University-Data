@@ -1,0 +1,60 @@
+---
+title: "College Admissions"
+output: html_document
+Authors: Aman Swaroop, Andrew Michaels, Elizabeth Su, Jo Inoue
+---
+
+```{r setup, include=FALSE}
+library("knitr")
+library("plotly")
+library("ggplot2")
+source("scripts/function_one.R")
+source("scripts/function_two.R")
+source("scripts/function_three.R")
+source("scripts/function_four.R")
+source("scripts/function_five.R")
+source("scripts/function_six.R")
+```
+## Introduction
+Choosing a college is one of the most complicated and impactful decisions in the lives of almost every teenager. The purpose of our INFO 201 project is to help advise the incoming college freshman class to engage in a reasonable decision making process in selecting suitable colleges for themselves. Students accessing our database will be able to quickly view significant admissions criteria including averages in GPA and standardized test scores to estimate their prospectives in applying to each univeristy. Information on school ranking, acceptance rate, and tuition is also provided to aid students in narrowing their search.  
+
+[U.S. Department of Education](https://collegescorecard.ed.gov/data/) This data is generated from the U.S. department of education (6806 rows, 1982 columns). It provides information on college statistics in regards to admission criteria for several different US universities.
+
+[American University Data](https://www.kaggle.com/sumithbhongale/american-university-data-ipeds-dataset#IPEDS_data.xlsx) This data is generated from tableau (1534 rows, 145 columns). This dataset provides insight into school ranking, GPA, and standardized test scores of US universities.
+
+[US-News](https://www.kaggle.com/theriley106/university-statistics The data was retrieved from US-News) (311 rows, 39 columns) This dataset compiles a wide range of student statistics to rank univeristies in the dataset.
+
+
+## Summary Information 
+Data that we used containing information about `r summarized_info$total_universities` universities all over the nation. The average tution of universities are \$`r summarized_info$ave_tuition`. Through all school, the average GPA is `r summarized_info$ave_gpa` and average score for SAT is `r summarized_info$ave_SAT_score`, average ACT score is `r summarized_info$ave_ACT_score`. The school with highest acceptance rate is `r highest_accpetance_school$INSTNM`.
+
+
+## Summary Table
+```{r echo=FALSE}
+kable(head(summary_table))
+```
+
+The summary table helps high school students determine their chances of acceptance to specific universities as it highlight average SAT and ACT scores and GPA. The summary table breakdown the various ethic groups that make up the universities student population. From the first six universities displayed, the University of Alabama in Huntsville has the highest avg SAT score of 1314. If a student scored 1100 on the SAT, then they would be able to determine that their chances of acceptance are greater if they applied to either Alabama A&M University of Alabama State University.
+
+## Avg Summary Table
+```{r echo=FALSE}
+kable(head(avg_summary_table))
+```
+
+The this is the average data table that includes the average results of data collected by states. We decided to sort the data in ascending order based on the ACT scores so that it would be easier for students to pick which states had the best schools for the students that apply to go to college.
+
+## Including Plots
+
+This graph illustrates the average tuition of all the universities in each state. The scatter plot can help advise students to look into universities by state based on tuition price. In this way, students can narrow their college selection by observing which states, on average, hold universities with higher or lower tuition statements. 
+`r chart_one` 
+
+These graphs show the average SAT/ACT, GPA, acceptance rate, and univeristy ranking of all universities in each state.  This chart was intended to show the average academic performances from each state, along with showing how each state ranks compared to others. The less the rank, the better they are.
+`r mean_sat`
+`r mean_act`
+`r mean_hs_gpa`
+`r mean_acceptance_rate`
+`r mean_ranking`
+
+
+`r pie_plot`
+This graph shows the average percentage of ethnicity distribution of all unversities in the United States. Pie chart helps students to see the distribution of overall ethnicity at university. 
