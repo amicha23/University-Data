@@ -30,4 +30,3 @@ Portray data usage in a table format.
 !["Conclusion"](images/page7.png)
 
 Summarize findings.
-
