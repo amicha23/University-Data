@@ -7,11 +7,11 @@ Create a Web application using Rshiny to visualize data about college statistics
 
 Introduce the problem statement.
 
-!["Tuition Summary"](images/page2.png)
+!["Tuition Summary"](images/page2.PNG)
 
 Create a summary of the most expensive colleges based on in-state and out-of-state tuition in each state. Use an interactive scatter plot to visualize the results.
 
-!["University Map"](images/page3.png)
+!["University Map"](images/page3.PNG)
 
 Create a map showing the locations of universities in the United States.
 
@@ -23,10 +23,10 @@ Utilize a pie chart to understand diversity in universities in the US.
 
 Use several bar charts to visualize college statistics (ranking, SAT/ACT, GPA) based on colleges in each state.
 
-!["Summary Table"](images/page6.png)
+!["Summary Table"](images/page6.PNG)
 
 Portray data usage in a table format.
 
-!["Conclusion"](images/page7.png)
+!["Conclusion"](images/page7.PNG)
 
 Summarize findings.
